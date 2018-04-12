@@ -13,7 +13,7 @@ namespace SentimentalTweets
 		{
 			InitializeComponent();
 
-			MainPage = new SentimentalTweets.MainPage();
+			MainPage = new NavigationPage(new Paginas.PaginaTweets());
 		}
 
 		protected override void OnStart ()

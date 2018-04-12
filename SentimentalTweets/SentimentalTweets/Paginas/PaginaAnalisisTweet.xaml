@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:labelTextColor="clr-namespace:SentimentalTweets.Helpers;assembly=SentimentalTweets"
+             x:Class="SentimentalTweets.Paginas.PaginaAnalisisTweet">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <labelTextColor:StringToColorConverter x:Key="StringToColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" Padding="10">
+            <Label Text="Análisis" TextColor="Blue" FontSize="Large"/>
+            
+            <ActivityIndicator x:Name="indicator" Color="Green" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <Label Text="Tweet" FontSize="Small" TextColor="Gray"/>
+            <Label Text="{Binding Mensaje}" FontSize="Medium" LineBreakMode="WordWrap" 
+                   TextColor="{Binding Sentimiento, Converter={StaticResource StringToColorConverter}}"/>
+            <BoxView HeightRequest="3" Margin="10" />
+
+            <Label Text="Palabras Clave" FontSize="Small" TextColor="Gray"/>
+            <Label Text="{Binding PalabrasClave}" FontSize="Medium" LineBreakMode="WordWrap" TextColor="Black"/>
+            <BoxView HeightRequest="3" Margin="10" />
+
+            <Label Text="Idioma" FontSize="Small" TextColor="Gray"/>
+            <Label Text="{Binding Idioma}" FontSize="Medium" TextColor="Black"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
