@@ -9,3 +9,5 @@ Este proyecto consiste en una app de Xamarin que obtiene los últimos tweets de 
 * Las palabras clave
 
 ¿Quieres aprender a desarrollarlo paso a paso? Revisa http://luisbeltran.mx/2018/04/12/obten-el-sentimiento-de-un-tweet-con-xamarin-y-text-analytics-api
+
+Slides de la charla: https://www.slideshare.net/icebeam/webinar-servicios-cognitivos-1/
